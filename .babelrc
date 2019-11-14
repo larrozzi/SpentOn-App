@@ -1,0 +1,10 @@
+{  //replaces the arguments we need with running babel
+    "presets":[
+        "@babel/env",
+        "@babel/react"
+    ],
+    "plugins": [
+        "transform-class-properties",
+        "@babel/plugin-proposal-object-rest-spread"
+    ]
+}
