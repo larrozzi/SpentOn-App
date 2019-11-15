@@ -8,6 +8,7 @@ import {setTextFilter} from './actions/filters';
 import getVisibleExpenses from './selectors/expenses'; //can import it with any name
 import 'normalize.css/normalize.css'; //for having all browser show the same thing
 import './styles/styles.scss';  
+import 'react-dates/lib/css/_datepicker.css';
 
 const store= configureStore();
 
