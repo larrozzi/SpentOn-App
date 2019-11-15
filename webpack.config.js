@@ -64,7 +64,7 @@ module.exports = (env,argv) => {
     },
 
     plugins: [
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin({filename:'myStyles.css'})
     ]
   }
 }
