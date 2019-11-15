@@ -50,7 +50,7 @@ module.exports = (env,argv) => {
       ]
     },
 
-  devtool:isProduction ?'source-map' :'cheap-module-eval-source-map',
+  devtool:isProduction ?'source-map' :'eval-source-map',
   // if (argv.mode === 'development') {
   //   devtool:'cheap-module-eval-source-map';
   // }
