@@ -53,5 +53,9 @@
   },
   "resolutions": {
     "js-yaml": "3.7.0"
+  },
+  
+  "optionalDependencies": {
+    "fsevents": "*"
   }
 }
