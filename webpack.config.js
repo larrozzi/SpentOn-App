@@ -34,7 +34,7 @@ module.exports = (env,argv) => {
 				use: [
 					isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: {sourceMap: true}},
-          { loader: 'sass-loader', options: {sourceMap: true} }
+          { loader: 'sass-loader', options: {sourceMap: true}}
         ],
         	// This compiles styles specific to this app
 				include: resolve(__dirname, 'src/styles'),
@@ -60,7 +60,7 @@ module.exports = (env,argv) => {
     
     devServer:{
         contentBase:path.join(__dirname, 'public'),
-        historyApiFallback:true
+        historyApiFallback:true // serves up index.html in th public folder everytime there is a 404
     },
 
     plugins: [
