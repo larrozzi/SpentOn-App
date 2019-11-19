@@ -11,6 +11,6 @@ app.get('*', (req, res)=>{ //* any path that produces a 404
     res.sendFile(path.join(publicPath,'index.html'))
 }) 
 
-app.listen(port,() =>{
+app.listen(port, () => {
     console.log('server is up')
 });
