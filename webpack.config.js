@@ -15,7 +15,7 @@ module.exports = (env,argv) => {
     // entry: './src/playground/descructuring.js',
     // entry: './src/playground/hoc.js',
     output: {
-      path: path.join(__dirname, 'public'),
+      path: path.join(__dirname, 'public','dist'),
       filename: 'bundle.js'
     }, 
     module:{
@@ -60,8 +60,9 @@ module.exports = (env,argv) => {
     
     devServer:{
         contentBase:path.join(__dirname, 'public'),
-        historyApiFallback:true // serves up index.html in th public folder everytime there is a 404
-    },
+        historyApiFallback:true, // serves up index.html in th public folder everytime there is a 404
+        publicPath:'/dist/'
+      },
 
     plugins: [
       new MiniCssExtractPlugin({filename:'myStyles.css'})
