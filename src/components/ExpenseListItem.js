@@ -4,7 +4,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import moment from 'moment';
-import numeral from 'numeral'
+import numeral from 'numeral';
+
 //const ExpenseListItem = (props) => ( //deconstructing props
 // const state = store.getState();
 

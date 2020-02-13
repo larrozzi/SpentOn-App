@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import ExpenseForm from './ExpenseForm'
-import { addExpense } from '../actions/expenses'
+import {addExpense} from '../actions/expenses'
 
 const AddExpensePage = (props) => ( //props comes from the store, and passes it to the component including a dispatch attribute
     <div>

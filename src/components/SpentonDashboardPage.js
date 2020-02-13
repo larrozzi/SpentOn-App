@@ -1,13 +1,15 @@
 import React from 'react';
 import ExpenseList from './ExpenseList';
 import ExpenseListFilters from './ExpenseListFilters';
+import ExpensesSummary from './ExpensesSummary';
 
-const SpentonDashboardPage=()=>(
+const SpentonDashboardPage = () =>(
     <div>
-        <ExpenseListFilters/>
-        <ExpenseList/>
+        <ExpensesSummary />
+        <ExpenseListFilters />
+        <ExpenseList />
     </div>
-) 
+); 
 
 
 export default SpentonDashboardPage; 

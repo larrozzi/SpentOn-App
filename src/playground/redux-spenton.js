@@ -17,7 +17,7 @@ const addExpense =(
 //REMOVE_EXPENSE 
 const removeExpense = ({ id }={}) => ({
     type:'REMOVE_EXPENSE',
-    id //action.id
+    id //action.id                                                                                                                                                              
 });
 
 //EDIT_EXPENSE
