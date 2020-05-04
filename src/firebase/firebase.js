@@ -15,6 +15,9 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const database = firebase.database();
+
+export {firebase, database as default};
+
 //fireabase doesn't have arrays so we make a list of objects with push
 
 // database.ref('expenses')
@@ -33,33 +36,33 @@ const database = firebase.database();
 
 
 
-database.ref('expenses')
-    .on('value',(snapshot) => { // on doesnt support promises so the snapshot is inserted as an argument
-        const expenses =[]
-        snapshot.forEach((childSnapshot) => {
-            expenses.push({
-                id:childSnapshot.key,
-                ...childSnapshot.val()
-            })
-        })
+// database.ref('expenses')
+//     .on('value',(snapshot) => { // on doesnt support promises so the snapshot is inserted as an argument
+//         const expenses =[]
+//         snapshot.forEach((childSnapshot) => {
+//             expenses.push({
+//                 id:childSnapshot.key,
+//                 ...childSnapshot.val()
+//             })
+//         })
 
-        console.log(expenses)
-    })
+//         console.log(expenses)
+//     })
     
-// child_removed
-database.ref('expenses').on('child_removed',(snapshot) => {
-    console.log(snapshot.key, snapshot.val())
-})
+// // child_removed
+// database.ref('expenses').on('child_removed',(snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
 
-//child_changed
-database.ref('expenses').on('child_changed', (snapshot) => {
-    console.log(snapshot.key, snapshot.val())
-})
+// //child_changed
+// database.ref('expenses').on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
 
-//child_added fires when a new expense is added
-database.ref('expenses').on('child_added', (snapshot) => {
-    console.log(snapshot.key, snapshot.val())
-})
+// //child_added fires when a new expense is added
+// database.ref('expenses').on('child_added', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val())
+// })
 
 // database.ref('expenses').push({
 //     description:'24" monitor',
@@ -73,12 +76,12 @@ database.ref('expenses').on('child_added', (snapshot) => {
 //     createdAt:'2020-05-03',
 //     note:''
 // })
-database.ref('expenses').push({
-    description:'mouse and keyboard',
-    amount:4483,
-    createdAt:'2020-05-03',
-    note:'refurbished deal'
-})
+// database.ref('expenses').push({
+//     description:'mouse and keyboard',
+//     amount:4483,
+//     createdAt:'2020-05-03',
+//     note:'refurbished deal'
+// })
 
 // database.ref().on('value', (snapshot)=>{
 //     const valObj= snapshot.val();
