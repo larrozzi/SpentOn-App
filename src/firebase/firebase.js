@@ -1,5 +1,6 @@
 import * as firebase from 'firebase';
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyBDogoE0rV4xgNsWV65CVg_9Ju-6er97y4",
     authDomain: "spenton-cfa2b.firebaseapp.com",
@@ -15,8 +16,9 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export {firebase, database as default};
+export {firebase, googleAuthProvider, database as default};
 
 //fireabase doesn't have arrays so we make a list of objects with push
 
