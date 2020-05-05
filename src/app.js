@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import {addExpense, removeExpense} from './actions/expenses';
+import {startSetExpenses, removeExpense} from './actions/expenses';
 import {setTextFilter} from './actions/filters';
 import getVisibleExpenses from './selectors/expenses'; //can import it with any name
 import 'normalize.css/normalize.css'; //for having all browser show the same thing
@@ -33,5 +33,12 @@ const jsx = (
     <AppRouter/>
     </Provider>
 )
+
+ReactDOM.render(<p> Loading... </p>,  document.getElementById('app'));
+
+store.dispatch(startSetExpenses()).then(() => {
+    ReactDOM.render(jsx,  document.getElementById('app')); // AppRouter is component
+})
+
  //ReactDOM.render(routes,document.getElementById('app'));  //routes was a const in the same file 
- ReactDOM.render(jsx,  document.getElementById('app')); // AppRouter is component
+ 
