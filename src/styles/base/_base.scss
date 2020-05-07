@@ -7,19 +7,23 @@ body{
     font-family: Helvetica, 'Times New Roman', sans-serif;
     font-size:$med-size;
     background-color: white;
+    color:$dark-or;
+    line-height:1.6;
 }
 
 h1{
-    font-size: 2.2rem;
+    font-size: 2.8rem;
 }
 
 
 button{
     cursor:pointer;
+    color:$oil-green
 }
 
 button:disabled{
     cursor:default;
+    size: $l-size;
 }
 
 .is-active{
