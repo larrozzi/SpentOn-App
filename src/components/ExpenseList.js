@@ -11,13 +11,27 @@
 //     </div> 
 // )
 
-const ExpenseList = (props) => ( //stateless component that can receive props (expenses from connect )
-<div>
-    <h1>Expense List</h1>
-    {props.expenses.map((expense) => { // how to take in an array of objects(expense) and get back an array of expense items
-        return <ExpenseListItem key = {expense.id} {...expense}/> //...expense to pass the props that will be deconstructed
-    })}
-</div>
+export const ExpenseList = (props) => (
+    <div className= "content-container">
+        <div className="list-header">
+            <div className= "show-for-mobile">Expenses</div> 
+            <div className= "show-for-desktop">Expense</div>
+            <div className= "show-for-desktop">Amount</div>
+        </div>
+        <div className="list-body">   
+        {
+            props.expenses.length===0 ? (
+                <div className="list-item list-item--message"> 
+                    <span>No expenses</span>
+                </div>
+            ) : (
+                props.expenses.map((expense) => { // how to take in an array of objects(expense) and get back an array of expense items
+                    return <ExpenseListItem key = {expense.id} {...expense}/> //...expense to pass the props that will be deconstructed
+                })
+            )
+        }
+        </div>
+    </div>
 ) 
 
 const mapStateToProps = (state)=>{ //state = store.getState();

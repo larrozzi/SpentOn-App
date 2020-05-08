@@ -9,7 +9,7 @@ module.exports = (env,argv) => {
   const isDev = argv.mode !== 'production'
   //const isProduction = env === 'production'
   return {
-    entry: './src/app.js',
+    entry: ['babel-polyfill','./src/app.js'],
     // entry: './src/playground/redux101.js',
     // entry:'./src/playground/redux-spenton.js',
     // entry: './src/playground/descructuring.js',

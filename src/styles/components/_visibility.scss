@@ -1,0 +1,11 @@
+.show-for-mobile{
+    @media (min-width:$desktop-breakpoint){
+        display:none; // don't display if the screen is smaller than the breakpoint
+}
+}
+
+.show-for-desktop{
+    @media (max-width: $desktop-breakpoint - .01rem){
+        display:none ; // don't display if the screen is bigger than the breakpoint
+    }
+} 
