@@ -11,7 +11,7 @@
 }
 
 .page-layout__box{
-    background: fade-out(white, .15);
+    background: fade-out(white, .50);
     border-radius:3px;
     text-align: center;
     width:25rem;
@@ -21,6 +21,5 @@
 .page-layout__title{
     margin: 0 0 $med-size 0; // top right bottom left 
     line-height: 1;
-    
 }
 

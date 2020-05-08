@@ -1,5 +1,9 @@
 //rem
 
+*{
+    box-sizing:border-box;
+}
+
 html{
     font-size:62.5%
 }
@@ -7,6 +11,7 @@ body{
     font-family: Helvetica, 'Times New Roman', sans-serif;
     font-size:$med-size;
     background-color: white;
+    //color:$dark-or;
     color:$dark-or;
     line-height:1.6;
 }

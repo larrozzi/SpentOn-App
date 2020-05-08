@@ -1,0 +1,20 @@
+// we can't use the TAG input to style all inputs because
+//it will affect 3rd party inputs too
+
+.text-input{
+border: 1px solid #cacccd;
+height:50px; //not including padding fixed with box-sizing:border-box
+font-size:$font-sz-large;
+font-weight: 300;
+padding:$s-size;
+}
+
+.select{
+    @extend .text-input;
+    
+}
+
+.textarea{
+    @extend .text-input;
+    height:10rem;
+}

@@ -9,7 +9,6 @@ export const LoginPage = ({startLogin}) =>(
             <p>Adulting is rough!</p>
             <button className='button' onClick= {startLogin}>Login</button>
         </div>
-     
     </div>
 )
 

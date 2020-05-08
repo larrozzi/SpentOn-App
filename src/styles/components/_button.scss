@@ -1,13 +1,16 @@
 .button{
-    background:$oil-green;
+    background:$army-green;
+    border:none;
     color: white;
+    display: inline-block;
     font-size:$font-sz-large ;
     font-family: Arial, Helvetica, sans-serif;
-    padding:$s-size;
     font-weight: 300;
+    padding:$s-size;
     text-decoration: none; 
     text-align: center;
-    display: inline-block;
-    border:none;
-    
+}
+
+.button--link { //link modifier
+    background: none;
 }
