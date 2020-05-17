@@ -2,11 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux'
 import ExpenseForm from './ExpenseForm'
 import {startEditExpense,startRemoveExpense} from '../actions/expenses'; 
- import removeExpenseModal from '../components/removeExpenseModal'
+import RemoveExpenseModal from './RemoveExpenseModal'
 export class EditExpensePage extends React.Component {
-    state={
 
+    state={
+        showRemoveModal:false
     }
+
     onSubmit = (expense) => {
         this.props.startEditExpense(this.props.expense.id, expense) //id is passed as an object
         this.props.history.push('/dashboard')  
@@ -15,18 +17,24 @@ export class EditExpensePage extends React.Component {
         this.props.startRemoveExpense({id: this.props.expense.id}) //id is passed as an object
         this.props.history.push('/dashboard')  
     }
-    onRemoveClick=() =>{
-        <removeExpenseModal sureUwannaRemove= {true}></removeExpenseModal>
+    onRemoveClick = () => {
+        console.log('hrere');
+        this.setState( {showRemoveModal:true});
+        console.log(this.state.showRemoveModal);
+        {/*<RemoveExpenseModal sureUwannaRemove= {true}></RemoveExpenseModal>*/}
     }
     handleRemoveExpense= () =>{
+        this.setState({showRemoveModal:false})
+        console.log('here1');
         this.onRemove()
     }
     handleKeepExpense= () =>{
-        
+        this.setState({showRemoveModal:false})
+        console.log('here2');
     }
     render(){
         return (
-                <div >
+                <div>
                     <div className="page-header">
                         <div className="content-container">
                             <h1 className="page-header__title"> Edit Expense </h1>
@@ -39,9 +47,13 @@ export class EditExpensePage extends React.Component {
                         />     
                         <button className="button button--secondary" onClick={this.onRemoveClick}> Remove Expense </button> 
                     </div>
-                    {/*<removeExpenseModal> </removeExpenseModal>*/}
-                    
-                    
+                    <RemoveExpenseModal
+                    showRemoveModal= {this.state.showRemoveModal}
+                    onRemoveClick={this.onRemoveClick}
+                    handleRemoveExpense={this.handleRemoveExpense}
+                    handleKeepExpense={this.handleKeepExpense}
+                    > 
+                    </RemoveExpenseModal>
                 </div>
         )    
     }
