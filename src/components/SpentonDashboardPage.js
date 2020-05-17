@@ -12,5 +12,4 @@ const SpentonDashboardPage = () =>(
     </div>
 ); 
 
-
 export default SpentonDashboardPage; 
