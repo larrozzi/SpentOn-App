@@ -8,13 +8,16 @@ import * as firebase from 'firebase';
 export const LoginPage = ({startLogin}) =>(
     <div className= "page-layout">
         <div className="page-layout__box">
-            <h1 className='page-layout__title'> Spenton</h1>
-            <p>Adulting is rough!</p>
-            {/*<button className='button' onClick= {startLogin}>Login with Google</button>*/}
+            <div className= "title-box">
+                <h1 className='page-layout__title'> Spenton</h1>
+                <p>Adulting is rough!</p>
+            </div>
+                {/*<button className='button' onClick= {startLogin}>Login with Google</button>*/}
             <StyledFirebaseAuth 
                 uiConfig={uiConfig} 
                 firebaseAuth= {firebase.auth()}
             />
+            
         </div>
     </div>
 )

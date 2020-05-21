@@ -6,20 +6,29 @@
  height: 100vh;
  justify-content: center;
  width: 100vw;
-
-
 }
 
 .page-layout__box{
-    background: fade-out(white, .50);
+    //background-color: invert($color:$dark-or);
+    background: fade-out(invert($color:$dark-or), .25);
     border-radius:3px;
     text-align: center;
-    width:25rem;
+    width:30rem;
     padding:$l-size $s-size;
 }
 
 .page-layout__title{
     margin: 0 0 $med-size 0; // top right bottom left 
     line-height: 1;
+}
+
+.title-box{
+    //background-color: invert($color:$dark-or);
+    background: fade-out(invert($color:$or), .50);
+    border: solid thin;
+    border-radius: inherit;
+    padding:$l-size 0 $med-size 0;
+    margin:0 0 $s-size 0;
+
 }
 

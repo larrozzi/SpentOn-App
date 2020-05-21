@@ -1,11 +1,10 @@
 .list-header{
-    background: $xlight-or;
-    border: 1px solid darken($xlight-or,10%);
-    color: $marine;
+    background: $xlight-blue;
+    border: 1px solid darken($xlight-blue,10%);
+    color: $dark-marine;
     display: flex;
     justify-content: space-between;
     padding: $s-size $med-size;
-
 }
 
 .list-body{
@@ -15,7 +14,7 @@
     }
 }
 .list-item{
-    border:1px solid darken($xlight-or,7%);
+    border:1px solid darken($xlight-blue,7%);
     border-top: none; 
     color: $dark-marine;
     display: flex;
@@ -24,7 +23,7 @@
     text-decoration: none;
     transition: background .3s ease;
     &:hover{ //
-        background: $xlight-or;
+        background: $xlight-blue;
     }
     @media (min-width: $desktop-breakpoint){
         align-items: center;

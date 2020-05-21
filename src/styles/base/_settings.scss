@@ -5,6 +5,8 @@ $army-green:#506535;
 $dark-or:#6a2f17;
 $ligh-or:#8f7a36;
 $xlight-or:#FFF3E0;
+$xlight-blue:fade-out(invert($dark-or), .50);
+$light-blue:fade-out(invert($dark-or), .15);
 $or:#964621;
 $marine:#5289a4;
 $dark-marine:#17526a;
