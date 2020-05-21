@@ -18,19 +18,14 @@ export class EditExpensePage extends React.Component {
         this.props.history.push('/dashboard')  
     }
     onRemoveClick = () => {
-        console.log('hrere');
         this.setState( {showRemoveModal:true});
-        console.log(this.state.showRemoveModal);
-        {/*<RemoveExpenseModal sureUwannaRemove= {true}></RemoveExpenseModal>*/}
     }
-    handleRemoveExpense= () =>{
+    handleRemoveExpense = () =>{
         this.setState({showRemoveModal:false})
-        console.log('here1');
         this.onRemove()
     }
-    handleKeepExpense= () =>{
+    handleKeepExpense = () =>{
         this.setState({showRemoveModal:false})
-        console.log('here2');
     }
     render(){
         return (
@@ -48,10 +43,9 @@ export class EditExpensePage extends React.Component {
                         <button className="button button--secondary" onClick={this.onRemoveClick}> Remove Expense </button> 
                     </div>
                     <RemoveExpenseModal
-                    showRemoveModal= {this.state.showRemoveModal}
-                    onRemoveClick={this.onRemoveClick}
-                    handleRemoveExpense={this.handleRemoveExpense}
-                    handleKeepExpense={this.handleKeepExpense}
+                        showRemoveModal= {this.state.showRemoveModal}
+                        handleRemoveExpense= {this.handleRemoveExpense}
+                        handleKeepExpense= {this.handleKeepExpense}
                     > 
                     </RemoveExpenseModal>
                 </div>

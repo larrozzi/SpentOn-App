@@ -6,6 +6,7 @@ const RemoveExpenseModal =(props)=>(
         <Modal
         isOpen={props.showRemoveModal===true}
         onRequestClose={props.handleKeepExpense || props.handleRemoveExpense}
+        appElement={document.getElementById('app')}
         contentLabel="Remove Expense"
         closeTimeoutMs={200}
         >

@@ -16,7 +16,6 @@ const store= configureStore();
 
 console.log(store.getState());
     
-
 //setTextFilter-> bill (2 items) -> (1 item)
 //store.dispatch(setTextFilter('bill'))
 // store.dispatch(setTextFilter('water'))
@@ -34,7 +33,7 @@ const jsx = (
     </Provider>
 )
 
-let hasRendered =false;
+let hasRendered = false;
 const renderApp = () => {
     if (!hasRendered){
         ReactDOM.render(jsx,  document.getElementById('app'));

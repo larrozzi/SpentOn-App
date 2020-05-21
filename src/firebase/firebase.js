@@ -1,5 +1,6 @@
 import * as firebase from 'firebase';
-
+import * as firebaseui from 'firebaseui'
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBDogoE0rV4xgNsWV65CVg_9Ju-6er97y4",
@@ -15,10 +16,58 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+
+const uiConfig = {
+    callbacks: {
+        signInSuccessWithAuthResult: () => false
+    },
+    signInFlow: 'popup',
+    signInSuccessUrl: '/dashboard',
+    signInOptions: [
+    // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        firebase.auth.GithubAuthProvider.PROVIDER_ID
+  ],
+}
+
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export {firebase, googleAuthProvider, database as default};
+const emailAuthProvider = firebase.auth.EmailAuthProvider.PROVIDER_ID
+const facebookAuthProvider = firebase.auth.FacebookAuthProvider.PROVIDER_ID
+const twitterAuthProvider = firebase.auth.TwitterAuthProvider.PROVIDER_ID
+const githubAuthProvider = firebase.auth.GithubAuthProvider.PROVIDER_ID
+
+// ui.start('#firebaseui-auth-container', {
+//     signInOptions:
+//     [
+//       {
+//         provider:emailAuthProvider,
+//         signInMethod: firebase.auth.EmailAuthProvider.EMAIL_LINK_SIGN_IN_METHOD
+//       },
+//     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+//     facebookAuthProvider,
+//     //twitterAuthProvider,
+//     //githubAuthProvider
+//     ]
+//   });
+
+// const ui = new firebaseui.auth.AuthUI(firebase.auth())
+
+export {
+    firebase, 
+    uiConfig,
+    googleAuthProvider, 
+    emailAuthProvider,
+    facebookAuthProvider,
+    twitterAuthProvider,
+    githubAuthProvider,
+    database as default
+};
+
 
 //fireabase doesn't have arrays so we make a list of objects with push
 
