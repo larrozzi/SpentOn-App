@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-
 const RemoveExpenseModal =(props)=>( 
         <Modal
                 className= "remove-modal"
