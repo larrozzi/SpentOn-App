@@ -1,0 +1,30 @@
+.ReactModalPortal > div{ // > to target child div of modal portal
+    opacity: 0;
+}
+    
+.ReactModalPortal .ReactModal__Overlay{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        transition: opacity 200ms ease-in-out;
+}    
+    
+.ReactModalPortal .ReactModal__Overlay--after-open{
+      opacity: 1;
+}
+.ReactModalPortal .ReactModal__Overlay--before-close{
+      opacity: 0;
+}
+
+.remove-modal{
+    background: $xlight-or;
+   // color:white;
+    max-width: 30rem;
+    outline:none;
+    padding: $xl-size;
+    text-align: center;
+}    
+
+.modal__title{
+    margin:0 0 $l-size 0;
+}

@@ -4,17 +4,18 @@ import Modal from 'react-modal';
 
 const RemoveExpenseModal =(props)=>( 
         <Modal
-        isOpen={props.showRemoveModal===true}
-        onRequestClose={props.handleKeepExpense || props.handleRemoveExpense}
-        appElement={document.getElementById('app')}
-        contentLabel="Remove Expense"
-        closeTimeoutMs={200}
-        >
-        
-        <p> Are you sure?</p>
-        {}
-        <button onClick= {props.handleRemoveExpense}> Yes </button>
-        <button onClick= {props.handleKeepExpense}> No </button>
+                className= "remove-modal"
+                isOpen={props.showRemoveModal===true}
+                onRequestClose={props.handleKeepExpense || props.handleRemoveExpense}
+                appElement={document.getElementById('app')}
+                contentLabel="Remove Expense"
+                closeTimeoutMs={200}
+                >
+                
+                <h3 className='modal__title'> Are you sure?</h3>
+                {}
+                <button className='button button--modal' onClick= {props.handleRemoveExpense}> Yes </button>
+                <button className='button button--modal' onClick= {props.handleKeepExpense}> No </button>
         </Modal>
 )
 
