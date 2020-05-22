@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {startLogin}  from '../actions/auth' //not used anymore
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import {uiConfig} from '../firebase/firebase' 
+import {uiConfig,app} from '../firebase/firebase' 
 //import * as firebase from 'firebase';
 
 export const LoginPage = ({startLogin}) =>(
@@ -15,7 +15,7 @@ export const LoginPage = ({startLogin}) =>(
                 {/*<button className='button' onClick= {startLogin}>Login with Google</button>*/}
             <StyledFirebaseAuth 
                 uiConfig={uiConfig} 
-                firebaseAuth= {firebase.auth()}
+                firebaseAuth= {app.auth()}
             />
             
         </div>
