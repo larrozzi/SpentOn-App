@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-export const RemoveExpenseModal =(props)=>( 
+const RemoveExpenseModal =(props)=>( 
         <Modal
                 className= "remove-modal"
                 isOpen={props.showRemoveModal===true}
@@ -18,4 +18,4 @@ export const RemoveExpenseModal =(props)=>(
         </Modal>
 )
 
-
+export default RemoveExpenseModal

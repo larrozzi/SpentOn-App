@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import {startEditExpense,startRemoveExpense} from '../actions/expenses'; 
-import {RemoveExpenseModal} from './RemoveExpenseModal';
+import RemoveExpenseModal from './RemoveExpenseModal';
 export class EditExpensePage extends React.Component {
 
     state={
