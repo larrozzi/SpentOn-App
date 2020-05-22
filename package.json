@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "Yassine Laaroussi",
   "license": "MIT",
+  "description": "App to help users track their expenses.",
+  "engines": {
+    "node": "12.13.0"
+  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --mode=production",
