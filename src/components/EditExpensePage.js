@@ -62,7 +62,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
 })
 
-export default connect(mapStateToProps,mapDispatchToProps)(EditExpensePage);
+export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage);
 
 // const EditExpensePage=(props)=>{
 //    // console.log(props) //can only be used with return way of writing arrow function;
