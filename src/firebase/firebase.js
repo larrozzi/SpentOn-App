@@ -1,4 +1,7 @@
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
+import app from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 import * as firebaseui from 'firebaseui'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
@@ -13,8 +16,8 @@ const firebaseConfig = {
     measurementId: "G-6T7GJM40HF"
 };
 
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+app.initializeApp(firebaseConfig);
+//app.analytics();
 
 
 const uiConfig = {
@@ -25,21 +28,21 @@ const uiConfig = {
     signInSuccessUrl: '/dashboard',
     signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        firebase.auth.GithubAuthProvider.PROVIDER_ID
+        app.auth.GoogleAuthProvider.PROVIDER_ID,
+        app.auth.FacebookAuthProvider.PROVIDER_ID,
+        app.auth.EmailAuthProvider.PROVIDER_ID,
+        app.auth.TwitterAuthProvider.PROVIDER_ID,
+        app.auth.GithubAuthProvider.PROVIDER_ID
   ],
 }
 
-const database = firebase.database();
-const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+const database = app.database();
+const googleAuthProvider = new app.auth.GoogleAuthProvider();
 
-const emailAuthProvider = firebase.auth.EmailAuthProvider.PROVIDER_ID
-const facebookAuthProvider = firebase.auth.FacebookAuthProvider.PROVIDER_ID
-const twitterAuthProvider = firebase.auth.TwitterAuthProvider.PROVIDER_ID
-const githubAuthProvider = firebase.auth.GithubAuthProvider.PROVIDER_ID
+const emailAuthProvider = app.auth.EmailAuthProvider.PROVIDER_ID
+const facebookAuthProvider = app.auth.FacebookAuthProvider.PROVIDER_ID
+const twitterAuthProvider = app.auth.TwitterAuthProvider.PROVIDER_ID
+const githubAuthProvider = app.auth.GithubAuthProvider.PROVIDER_ID
 
 // ui.start('#firebaseui-auth-container', {
 //     signInOptions:
@@ -58,7 +61,8 @@ const githubAuthProvider = firebase.auth.GithubAuthProvider.PROVIDER_ID
 // const ui = new firebaseui.auth.AuthUI(firebase.auth())
 
 export {
-    firebase, 
+    //firebase,
+    app, 
     uiConfig,
     googleAuthProvider, 
     emailAuthProvider,

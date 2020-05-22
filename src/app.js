@@ -9,7 +9,7 @@ import getVisibleExpenses from './selectors/expenses'; //can import it with any 
 import 'normalize.css/normalize.css'; //for having all browser show the same thing
 import './styles/styles.scss';  
 import 'react-dates/lib/css/_datepicker.css';
-import {firebase} from'./firebase/firebase';
+import {app} from'./firebase/firebase';
 import LoadingPage from './components/LoadingPage';
  
 const store= configureStore();
@@ -43,7 +43,7 @@ const renderApp = () => {
 
 ReactDOM.render(<LoadingPage />,  document.getElementById('app'));
 
-firebase.auth().onAuthStateChanged((user) => {
+app.auth().onAuthStateChanged((user) => {
     if (user){
         store.dispatch(login(user.uid))
         //console.log('uid', user.uid)

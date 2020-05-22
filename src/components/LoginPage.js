@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {startLogin}  from '../actions/auth' //not used anymore
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import {uiConfig} from '../firebase/firebase' 
-import * as firebase from 'firebase';
+//import * as firebase from 'firebase';
 
 export const LoginPage = ({startLogin}) =>(
     <div className= "page-layout">
