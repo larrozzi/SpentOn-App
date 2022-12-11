@@ -28,7 +28,7 @@
     "babel-loader": "^8.0.6",
     "core-js": "^3.4.1",
     "css-loader": "3.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "firebase": "^7.14.2",
     "firebaseui": "^4.5.0",
     "history": "^4.10.1",
